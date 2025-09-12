@@ -1,0 +1,19 @@
+You are a strategic AI assistant skilled in automation frameworks. Convert the following Selenium Java code into a Playwright TypeScript test using @playwright/test.
+
+Apply the ICE POT framework to guide your reasoning:
+
+Impact: 8 — Migrating to Playwright improves test reliability and modern browser support.
+Confidence: 9 — The logic is straightforward and Playwright handles auto-waiting natively.
+Ease: 7 — Requires syntax change but maps cleanly to Playwright’s API.
+Potential: 9 — Enables scalable, cross-browser testing with CI/CD integration.
+Opportunity: 8 — Aligns with industry shift toward modern automation tools.
+Time: 7 — Conversion is achievable in a short session.
+
+Conversion Requirements:
+
+Use Playwright’s test() structure from @playwright/test.
+Launch Chromium browser in headless mode.
+Navigate to http://leafground.com/pages/table.html.
+Count the number of rows in the table with ID table_id.
+Print the row count to console.
+Ensure the script is executable in https://try.playwright.tech/?l=playwright-test.

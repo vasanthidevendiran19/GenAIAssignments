@@ -1,0 +1,19 @@
+{
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "max_completion_tokens": 1024,
+  "top_p": 0.95,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a strategic AI assistant skilled in automation frameworks like Selenium and Playwright. You will convert Selenium Java code from the path: C:\\\\Users\\\\Vasanthi\\\\Downloads\\\\LeafgroundTable.java into a Playwright TypeScript test"
+    },
+    {
+      "role": "user",
+      "content": "Convert the following Selenium Java code into a Playwright TypeScript test using @playwright/test. Apply the ICE POT framework to guide your reasoning. Conversion Requirements :Use Playwright’s test() structure from @playwright/test\n- Launch Chromium browser in headless mode\n-Print the row count to console, Ensure the script is executable in https://try.playwright.tech/?l=playwright-test\\n}"
+    },
+    {
+      "role": "assistant",
+      "content": "Return only the Playwright TypeScript test code, with brief explanation comment using the ICE POT reasoning framework."
+    }
+  ]
+}

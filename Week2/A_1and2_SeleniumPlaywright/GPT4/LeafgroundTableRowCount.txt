@@ -1,0 +1,32 @@
+import { test, expect, chromium, Page } from '@playwright/test';
+
+/**
+ * ICE POT Framework Example for Leafground Table Row Count
+ * I - Initialize browser and context
+ * C - Create page and navigate
+ * E - Execute actions (maximize, locate table rows)
+ * P - Perform validations (row count)
+ * O - Output results
+ * T - Terminate browser
+ */
+test('Leafground Table - Count Rows (ICE POT)', async () => {
+  // I: Initialize browser (headless mode)
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext();
+
+  // C: Create page and navigate to URL
+  const page = await context.newPage();
+  await page.goto('http://leafground.com/pages/table.html');
+
+  // E: Execute actions (set viewport size)
+  await page.setViewportSize({ width: 1280, height: 800 });
+
+  // P: Perform validations (find all table rows)
+  const allRows = await page.locator('table#table_id tr').all();
+
+  // O: Output results (print row count)
+  console.log('Number of rows:', allRows.length);
+
+  // T: Terminate browser
+  await browser.close();
+});
